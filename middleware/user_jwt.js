@@ -4,7 +4,7 @@ module.exports = async function(req,res,next){
     const token = req.header('Authorization');
 
     if(!token){
-        return res.json.status(401).json({
+        return res.status(401).json({
             msg:'User Not Found'
         });
     }
